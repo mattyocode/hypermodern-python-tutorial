@@ -9,7 +9,7 @@ homepage = ""
 repository = ""
 keywords = ["hypermodern"]
 packages = [
-    { include = "src/hypermodern_python"},
+    { include = "hypermodern_python", from = "src" },
 ]
 
 [tool.poetry.dependencies]
@@ -18,6 +18,19 @@ click = "^7.1.2"
 requests = "^2.25.1"
 
 [tool.poetry.dev-dependencies]
+pytest = "^6.2.1"
+coverage = {version = "^5.3.1", extras = ["toml"]}
+pytest-cov = "^2.10.1"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["hypermodern_python"]
+
+[tool.coverage.report]
+show_missing = true
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
