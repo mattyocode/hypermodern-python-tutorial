@@ -14,7 +14,7 @@ def main():
     try:
         with requests.get(API_URL) as response:
             response.raise_for_status()
-            return response.json()
+            data = response.json()
     except requests.RequestException as error:
         err_message = str(error)
         # click.secho(f"Error: {err_message}", fg="red")
