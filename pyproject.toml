@@ -16,6 +16,8 @@ packages = [
 python = "^3.8"
 click = "^7.1.2"
 requests = "^2.25.1"
+importlib-metadata = "^3.3.0"
+typing-extensions = "^3.7.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.1"
@@ -31,6 +33,7 @@ source = ["hypermodern_python"]
 
 [tool.coverage.report]
 show_missing = true
+fail_under = 80
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
