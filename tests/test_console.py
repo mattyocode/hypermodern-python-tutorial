@@ -43,10 +43,9 @@ def test_main_uses_en_wikipedia_org(runner, mock_requests_get):
     assert "en.wikipedia.org" in args[0]
 
 
-@patch('requests.get')
-def test_error_messgae(mock_get, runner):
-    mock_get.side_effect = RequestException('HTTPError!')
+def test_error_messgae(runner, mock_requests_get):
+    mock_requests_get.side_effect = RequestException
     result = runner.invoke(console.main)
     assert result.exit_code == 1
-    assert result.output == 'Error: HTTPError!\n'
+    assert "Error" in result.output
     
