@@ -7,6 +7,7 @@ from requests import RequestException
 
 from hypermodern_python import console
 
+
 @pytest.fixture
 def runner():
     return click.testing.CliRunner()
@@ -59,4 +60,3 @@ def test_main_prints_error_message_on_request_error(runner, mock_requests_get):
     mock_requests_get.side_effect = RequestException
     result = runner.invoke(console.main)
     assert "Error" in result.output
-    
