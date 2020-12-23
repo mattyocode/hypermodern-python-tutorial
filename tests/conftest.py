@@ -9,3 +9,7 @@ def mock_requests_get(mocker):
         "extract": "A small meal eaten from a pair of glasses",
     }
     return mock
+
+
+def pytest_configure(config):
+    config.addinivalue_line("markers", "e2e: mark as end-to-end test.")
