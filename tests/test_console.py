@@ -1,5 +1,3 @@
-from unittest.mock import patch, Mock
-
 import click.testing
 import click
 import pytest

@@ -3,6 +3,7 @@ import tempfile
 
 nox.options.sessions = "lint", "safety", "tests"
 
+
 @nox.session(python=["3.8", "3.7"])
 def tests(session):
     args = session.posargs or ["--cov", "-m", "not e2e"]
@@ -25,7 +26,7 @@ def lint(session):
         "flake8-bandit",
         "flake8-black",
         "flake8-bugbear",
-        "flake8-import-order"
+        "flake8-import-order",
     )
     session.run("flake8", *args)
 
