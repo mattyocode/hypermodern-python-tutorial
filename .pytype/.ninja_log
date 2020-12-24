@@ -1,0 +1,9 @@
+# ninja log v5
+0	1366	1608811230559728971	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/noxfile.pyi	d968ae142e1118d5
+1366	1920	1608811231137239097	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/hypermodern_python/__init__.pyi	f8ffc7622eafdf1a
+1920	3949	1608811233143522325	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/hypermodern_python/wikipedia.pyi	cbb95b11d0ab2536
+3949	4960	1608811234166238128	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/hypermodern_python/console.pyi	c16338db7b6f7e61
+4960	7012	1608811236201211761	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/tests/test_console.pyi	df24596460fe79a9
+7012	7570	1608811236784762287	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/tests/test_wikipedia.pyi	45d569fe5ba39166
+7570	8139	1608811237355094660	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/tests/conftest.pyi	5cf8dc5b9e67b83c
+8139	8727	1608811237940693634	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/tests/__init__.pyi	5f0b69eb9bdd939
