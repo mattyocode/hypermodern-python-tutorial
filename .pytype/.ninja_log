@@ -16,3 +16,7 @@
 7040	8425	1609100755545935604	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/noxfile.pyi	d968ae142e1118d5
 0	750	1609150960039964824	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/conf.pyi	a99cf37730770fe8
 750	2281	1609150961554609209	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/tests/test_wikipedia.pyi	45d569fe5ba39166
+0	567	1609174771663237552	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/hypermodern_python/__init__.pyi	f8ffc7622eafdf1a
+567	1576	1609174772668970640	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/hypermodern_python/console.pyi	c16338db7b6f7e61
+1576	3804	1609174774867738517	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/tests/test_console.pyi	df24596460fe79a9
+3804	5201	1609174776267384767	/Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/noxfile.pyi	d968ae142e1118d5

@@ -4,12 +4,9 @@ rule infer
 rule check
   command = /Users/moliver/code/python/hypermodern-tutorial/.nox/pytype/bin/python -m pytype.single --disable import-error --imports_info $imports --module-name $module -V 3.7 -o $out --analyze-annotated --nofail --quick $in
   description = check $module
-build /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/noxfile.pyi: check /Users/moliver/code/python/hypermodern-tutorial/noxfile.py
-  imports = /Users/moliver/code/python/hypermodern-tutorial/.pytype/imports/noxfile.imports
-  module = noxfile
-build /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/conf.pyi: check /Users/moliver/code/python/hypermodern-tutorial/docs/conf.py
-  imports = /Users/moliver/code/python/hypermodern-tutorial/.pytype/imports/conf.imports
-  module = conf
+build /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/tests/conftest.pyi: check /Users/moliver/code/python/hypermodern-tutorial/tests/conftest.py
+  imports = /Users/moliver/code/python/hypermodern-tutorial/.pytype/imports/tests.conftest.imports
+  module = tests.conftest
 build /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/hypermodern_python/__init__.pyi: check /Users/moliver/code/python/hypermodern-tutorial/src/hypermodern_python/__init__.py
   imports = /Users/moliver/code/python/hypermodern-tutorial/.pytype/imports/hypermodern_python.__init__.imports
   module = hypermodern_python.__init__
@@ -22,12 +19,15 @@ build /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/hypermodern_py
 build /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/tests/test_console.pyi: check /Users/moliver/code/python/hypermodern-tutorial/tests/test_console.py | /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/hypermodern_python/console.pyi
   imports = /Users/moliver/code/python/hypermodern-tutorial/.pytype/imports/tests.test_console.imports
   module = tests.test_console
-build /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/tests/conftest.pyi: check /Users/moliver/code/python/hypermodern-tutorial/tests/conftest.py
-  imports = /Users/moliver/code/python/hypermodern-tutorial/.pytype/imports/tests.conftest.imports
-  module = tests.conftest
-build /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/tests/test_wikipedia.pyi: check /Users/moliver/code/python/hypermodern-tutorial/tests/test_wikipedia.py | /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/hypermodern_python/wikipedia.pyi
-  imports = /Users/moliver/code/python/hypermodern-tutorial/.pytype/imports/tests.test_wikipedia.imports
-  module = tests.test_wikipedia
+build /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/conf.pyi: check /Users/moliver/code/python/hypermodern-tutorial/docs/conf.py
+  imports = /Users/moliver/code/python/hypermodern-tutorial/.pytype/imports/conf.imports
+  module = conf
 build /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/tests/__init__.pyi: check /Users/moliver/code/python/hypermodern-tutorial/tests/__init__.py
   imports = /Users/moliver/code/python/hypermodern-tutorial/.pytype/imports/tests.__init__.imports
   module = tests.__init__
+build /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/tests/test_wikipedia.pyi: check /Users/moliver/code/python/hypermodern-tutorial/tests/test_wikipedia.py | /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/hypermodern_python/wikipedia.pyi
+  imports = /Users/moliver/code/python/hypermodern-tutorial/.pytype/imports/tests.test_wikipedia.imports
+  module = tests.test_wikipedia
+build /Users/moliver/code/python/hypermodern-tutorial/.pytype/pyi/noxfile.pyi: check /Users/moliver/code/python/hypermodern-tutorial/noxfile.py
+  imports = /Users/moliver/code/python/hypermodern-tutorial/.pytype/imports/noxfile.imports
+  module = noxfile
