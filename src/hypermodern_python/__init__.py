@@ -6,6 +6,6 @@ except ImportError:  # pragma: no cover
 
 
 try:
-    __version__ = version(__name__)
+    __version__ = version(__package__)
 except PackageNotFoundError:  # pragma: no cover
     __version__ = "unknown"
