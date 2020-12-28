@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hypermodern-tutorial"
-version = "0.1.1"
+version = "0.1.4"
 description = "The hypermodern Python project - walking through tutorial"
 authors = ["mattyocode <matthewoliver@live.co.uk>"]
 license = "MIT"
@@ -54,4 +54,4 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-hypermodern-tutorial = "src.hypermodern_python.console:main"
+hypermodern-tutorial = "hypermodern_python.console:main"
