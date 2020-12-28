@@ -8,9 +8,6 @@ readme = "README.md"
 homepage = ""
 repository = ""
 keywords = ["hypermodern"]
-packages = [
-    { include = "hypermodern_python", from = "src" },
-]
 
 [tool.poetry.dependencies]
 python = "^3.8"
