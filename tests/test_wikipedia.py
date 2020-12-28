@@ -7,14 +7,14 @@ import pytest
 from hypermodern_python import wikipedia
 
 
-def test_random_page_uses_given_langugae(mock_requests_get: Mock) -> Mock:
+def test_random_page_uses_given_langugae(mock_requests_get: Mock) -> None:
     """It selects the specific Wikipedia language edition."""
     wikipedia.random_page(language="de")
     args, _ = mock_requests_get.call_args
     assert "de.wikipedia.org" in args[0]
 
 
-def test_random_page_returns_page_object(mock_requests_get: Mock) -> Mock:
+def test_random_page_returns_page_object(mock_requests_get: Mock) -> None:
     """It returns an object of type Page."""
     page = wikipedia.random_page()
     assert isinstance(page, wikipedia.Page)
