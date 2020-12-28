@@ -6,7 +6,7 @@ import nox
 from nox.sessions import Session
 
 
-nox.options.sessions = "lint", "mypy", "pytype", "tests"
+nox.options.sessions = "lint", "safety", "mypy", "pytype", "tests"
 locations = "src", "tests", "noxfile.py", "docs/conf.py"
 package = "hypermodern_python"
 
@@ -129,7 +129,6 @@ def docs(session: Session) -> None:
 @nox.session(python="3.8")
 def coverage(session: Session) -> None:
     """Upload coverage data."""
-    install_with_constraints(session, "coverage -E toml")
-    install_with_constraints(session, "codecov")
+    install_with_constraints(session, "coverage[toml]", "codecov")
     session.run("coverage", "xml", "--fail-under=0")
     session.run("codecov", *session.posargs)
